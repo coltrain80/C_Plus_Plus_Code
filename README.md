@@ -1,9 +1,17 @@
 # C_Plus_Plus_Code
 A repo for C++ code
 
-* Summarize the project and what problem it was solving.
-* What did you do particularly well?
-* Where could you enhance your code? How would these improvements make your code more efficient, secure, and so on?
-* Which pieces of the code did you find most challenging to write, and how did you overcome this? What tools or resources are you adding to your support network?
-* What skills from this project will be particularly transferable to other projects or course work?
-* How did you make this program maintainable, readable, and adaptable?
+## Summarize the project and what problem it was solving.
+* This project entailed building a Grocery Application that was meant to read a Grocery list from an input file, build a C++ Set from that data including item and quantity, back the data up as the application read the items and create an output file that listed the new grocery list in a format of "Item    Quantity".  It also included menu options so the user could search for an item on the list, display a histogram of the items on the list or print the set of items with the name and quantity. 
+## What did you do particularly well?
+* I followed the requirements exactly as they were written. There were business requirements (the code should have these options, it should display this data in this format, the data should be backed up along the way ect) and there was technical requirements (use a set to build the data, use pointers to update the set, ensure no memory leaks, protect user inputs, encapsulate the grocery class so it is reusable) that needed to be followed and I spent a good amount of time reviewing and reworking my code to ensure each item was met. This will be important as I continue to build products for stakeholders that have a wide range of requirements.
+* I also feel like my code is succint and memory efficient. I handle my Grocery Object Set with pointers and ensure memory cleanup as I go. I don't have any wasted lines of code and I've made comments in areas that are particulary complex (complexity if subjective of course!).
+## Where could you enhance your code? How would these improvements make your code more efficient, secure, and so on?
+* I would definitely break down my source.cpp file and create additional classes to encapsulate functionality. There was an opportunity for a IOHelper class to handle all the user inputs and outputs. I think there was an opportunity for a DisplayMenu class as well to handle the main menu.
+* Eventually I would have moved away from a console based application as well and built something that is more scalable, something that users could use on a handheld device like a smartphone or tablet.
+## Which pieces of the code did you find most challenging to write, and how did you overcome this? What tools or resources are you adding to your support network?
+* Using pointers was the most complex challenge with this assignement. I'm used to programming in Python and Ruby where there is no concept of memory management so understanding pointers, and most specifically WHY to use pointers was a challenge to pickup. I spent several hours reading and looking at examples of pointers to get this implementation working. I'm definitely not a pointers expert yet but I feel like I have the tools to recognize when I should consider using them, and I have a good basis for implementing them. I think things like StackOverflow are really helpful in scenarios like this because you can quickly identify quality examples and explanations, reducing the amount of time it takes for a concept to sink in.
+## What skills from this project will be particularly transferable to other projects or course work?
+* There are a ton of skills I will carry forward from this project, first being encapsulating functionalilty to ensure reusability. My grocery class could be picked up and used in another implementation without major code changes, and modular code is reusable! Things like error handling (try/catch), Sets, and reading from and writing to files (logging is good!) will be helpful going forward. 
+## How did you make this program maintainable, readable, and adaptable?
+* First by ensuring my Grocery class functionality contains ONLY things related to Grocery Objects. I split away IO and Display functionality into my source.cpp so my Grocery class doesn't contain anything that ties to to a terminal output. I've got clear comments for my methods and I've got comments on particularly complex portions of the code. Changes to the Grocery Class should be easily testable because the source.cpp doesn't need to be updated. 
